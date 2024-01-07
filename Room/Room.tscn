@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyx2kk6f3wrqb"]
+
+[ext_resource type="Script" path="res://Room/Room.gd" id="1_7l2nr"]
+
+[node name="Room" type="Node2D" groups=["rooms"]]
+script = ExtResource("1_7l2nr")
+
+[node name="InterItems" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]

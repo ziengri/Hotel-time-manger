@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4np8hkp20hbs"]
+
+[ext_resource type="Texture2D" uid="uid://dm6ylp4bdxrdi" path="res://theme/Stars.png" id="1_48stm"]
+[ext_resource type="Texture2D" uid="uid://eccbwx2p3ot0" path="res://theme/Tiny Wonder UI Free/Star_null.png" id="2_d0uj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u82l5"]
+atlas = ExtResource("1_48stm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47rrb"]
+atlas = ExtResource("1_48stm")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y21uw"]
+atlas = ExtResource("1_48stm")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tb2nq"]
+atlas = ExtResource("1_48stm")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fxvj"]
+atlas = ExtResource("1_48stm")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rjmv3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d0uj3")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u82l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47rrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y21uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tb2nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fxvj")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[node name="StarUi" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_rjmv3")
+animation = &"0"
+frame_progress = 0.419582
+offset = Vector2(8, 8)
