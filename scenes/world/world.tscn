@@ -3441,11 +3441,10 @@ position = Vector2(1, 0)
 position = Vector2(46, 38)
 
 [node name="Sprite2D" type="Sprite2D" parent="Room"]
-position = Vector2(-55, 62)
+position = Vector2(-54, 51)
 rotation = 3.14159
 scale = Vector2(1, -1)
 texture = ExtResource("7_u3wj6")
-offset = Vector2(0, -15)
 region_enabled = true
 region_rect = Rect2(188.895, 100.947, 37.4605, 27.7105)
 
@@ -3462,10 +3461,9 @@ region_enabled = true
 region_rect = Rect2(78.8164, 108.583, 19.4865, 36.0764)
 
 [node name="Sprite2D8" type="Sprite2D" parent="Room"]
-position = Vector2(24.5001, 68)
+position = Vector2(25, 59)
 scale = Vector2(0.992501, 1)
 texture = ExtResource("7_u3wj6")
-offset = Vector2(0, -9.07)
 region_enabled = true
 region_rect = Rect2(28.2628, 58.6508, 42.8339, 23.3254)
 
@@ -3494,11 +3492,10 @@ region_enabled = true
 region_rect = Rect2(235.045, 218.348, 10.4279, 11.0072)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Room"]
-position = Vector2(-54, 85)
+position = Vector2(-54, 77)
 rotation = 3.14159
 scale = Vector2(1, -1)
 texture = ExtResource("7_u3wj6")
-offset = Vector2(0, -9)
 region_enabled = true
 region_rect = Rect2(212.619, 157.677, 28.6768, 18.4806)
 
