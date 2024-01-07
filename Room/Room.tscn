@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyx2kk6f3wrqb"]
+[gd_scene load_steps=3 format=3 uid="uid://cyx2kk6f3wrqb"]
 
 [ext_resource type="Script" path="res://Room/Room.gd" id="1_7l2nr"]
+[ext_resource type="PackedScene" uid="uid://7flnejfaspto" path="res://IntercatebleItem/BroomItem/broom.tscn" id="2_ine47"]
 
 [node name="Room" type="Node2D" groups=["rooms"]]
 script = ExtResource("1_7l2nr")
@@ -8,3 +9,5 @@ script = ExtResource("1_7l2nr")
 [node name="InterItems" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Broom" parent="." instance=ExtResource("2_ine47")]

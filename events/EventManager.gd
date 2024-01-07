@@ -10,9 +10,10 @@ func add_event(room:Room,event_info:EventInfo)->void:
 	var timer : Timer = Timer.new()
 	add_child(timer)
 	timer.one_shot = true
-	timer.wait_time = 60.0
+	timer.wait_time = event_info.Time_to_event
 	timer.timeout.connect(on_event_fail.bind(room,event_info))
-	timer.start()
+	if event_info.After_Action != event_info.after_actions.ROOM_CLEAR:
+		timer.start()
 	
 	add_to_eventList(room,event_info,timer)
 	print(eventList)
@@ -20,7 +21,8 @@ func add_event(room:Room,event_info:EventInfo)->void:
 
 
 func finish_event(room:Room,event_info:EventInfo)->void:
-	
+	if event_info.After_Action == event_info.after_actions.ROOM_CLEAR:
+		room.status = Room.RoomStatus.FREE
 	remove_event_from_list(room,event_info)
 	give_reward(event_info)
 	print(eventList)

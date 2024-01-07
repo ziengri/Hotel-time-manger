@@ -27,12 +27,16 @@ func finish_event()->void:
 	Stats.player.set_physics_process(true)
 	EventManager.finish_event(room,event_info)
 	state = ItemState.NonActive
-	room.visitor.states.change_state(BaseStateVisitor.State.IDLEEVENT)
+	if event_info.After_Action != event_info.after_actions.ROOM_CLEAR:
+		room.visitor.states.change_state(BaseStateVisitor.State.IDLEEVENT)
 	game_started = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready()->void:
-	room = get_parent().get_parent()
+	if event_info.After_Action == event_info.after_actions.ROOM_CLEAR:
+		room = get_parent()
+	else:
+		room = get_parent().get_parent()	
 	interact_area.interacted.connect(make_interaction)
 	#start_event()
 

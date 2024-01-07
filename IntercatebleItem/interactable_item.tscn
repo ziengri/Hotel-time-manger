@@ -1,21 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://by3gp3ty5tmdq"]
+[gd_scene load_steps=8 format=3 uid="uid://by3gp3ty5tmdq"]
 
 [ext_resource type="Script" path="res://IntercatebleItem/InteractableItem.gd" id="1_antil"]
+[ext_resource type="Script" path="res://events/event_res.gd" id="2_rag7a"]
 [ext_resource type="PackedScene" uid="uid://beoexruwllm17" path="res://InteractArea/InteractArea.tscn" id="3_7xepi"]
+[ext_resource type="PackedScene" uid="uid://cno6oxepysxuy" path="res://MiniGames/RoomCleaning/room_cleaning_game.tscn" id="3_r68go"]
+
+[sub_resource type="Resource" id="Resource_4fuml"]
+script = ExtResource("2_rag7a")
+Alias = "event"
+Reward = 5
+Time_to_event = 60
+After_Action = 0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7bga"]
+size = Vector2(31, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcnl3"]
+size = Vector2(30, 28)
 
 [node name="InteractableItem" type="Node2D" groups=["interactable_items"]]
 y_sort_enabled = true
 script = ExtResource("1_antil")
+event_info = SubResource("Resource_4fuml")
+mini_game = ExtResource("3_r68go")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5.5, 5.5)
+shape = SubResource("RectangleShape2D_b7bga")
 
 [node name="InteractArea" parent="." instance=ExtResource("3_7xepi")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(5, 4)
+shape = SubResource("RectangleShape2D_qcnl3")
 
 [connection signal="area_entered" from="InteractArea" to="InteractArea" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractArea" to="InteractArea" method="_on_area_exited"]

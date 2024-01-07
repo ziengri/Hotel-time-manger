@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EventInfo" load_steps=3 format=3 uid="uid://upfdedetgsk"]
+
+[ext_resource type="Texture2D" uid="uid://c7irnlrynn2y2" path="res://icon.svg" id="1_qln4g"]
+[ext_resource type="Script" path="res://events/event_res.gd" id="2_tl346"]
+
+[resource]
+script = ExtResource("2_tl346")
+Alias = "Уборка комнаты"
+Img = ExtResource("1_qln4g")
+Reward = 0
+Time_to_event = 0
+After_Action = 1

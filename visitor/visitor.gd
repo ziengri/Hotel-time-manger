@@ -36,19 +36,6 @@ func _ready():
 	states.init(self)
 	animTree.active = true
 
-
-
-#func _unhandled_input(event):
-	#await get_tree().create_timer(1).timeout
-#
-	#states.input(event)
-	#if Input.is_action_just_pressed("ui_select"):
-		#if $States/Queue.queue_number == 3:
-			#get_tree().get_current_scene().get_node("Queue").queue_hotel[3]["free"] = true
-			#queue_free()
-		#return
-#
-
 var path: Array
 
 func _physics_process(delta):

@@ -12,7 +12,7 @@ func start_event()->void:
 	
 	if player.event_count <= 0:
 		print_debug("Возможно перенести выше в посетителя")
-		player.room.status = Room.RoomStatus.FREE
+		player.room.status = Room.RoomStatus.DIRTY
 		player.room.visitor = null
 		player.room = null
 		player.path = player.world.find_path(  player.tile_map.local_to_map(  player.position  ) , Vector2i.ONE  )
