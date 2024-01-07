@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu5jxiq1vjtr4"]
+
+[ext_resource type="Texture2D" uid="uid://d2lvo8o0n8yyk" path="res://scenes/world/Items_1_16x16.png" id="1_immtg"]
+[ext_resource type="Script" path="res://IntercatebleItem/Trash/trash.gd" id="2_y0sbr"]
+[ext_resource type="PackedScene" uid="uid://beoexruwllm17" path="res://InteractArea/InteractArea.tscn" id="3_q1212"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgd3q"]
+size = Vector2(16, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtn3x"]
+size = Vector2(20, 28)
+
+[node name="Trash" type="Sprite2D"]
+texture = ExtResource("1_immtg")
+region_enabled = true
+region_rect = Rect2(47.3772, 126.218, 15.9736, 17.9544)
+script = ExtResource("2_y0sbr")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_vgd3q")
+
+[node name="InteractArea" parent="." instance=ExtResource("3_q1212")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_vtn3x")

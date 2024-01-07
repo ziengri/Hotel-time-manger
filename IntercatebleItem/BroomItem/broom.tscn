@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://7flnejfaspto"]
+[gd_scene load_steps=6 format=3 uid="uid://7flnejfaspto"]
 
 [ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_oitcd"]
 [ext_resource type="Texture2D" uid="uid://crf8sb88wu50p" path="res://MiniGames/RoomCleaning/resources/broom.png" id="2_mgpre"]
 [ext_resource type="Resource" uid="uid://upfdedetgsk" path="res://IntercatebleItem/BroomItem/broom_eventinfo.tres" id="2_qc3go"]
-[ext_resource type="PackedScene" uid="uid://cno6oxepysxuy" path="res://MiniGames/RoomCleaning/room_cleaning_game.tscn" id="3_dm8ux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28dd7"]
 
@@ -12,7 +11,6 @@ size = Vector2(18, 20)
 
 [node name="Broom" instance=ExtResource("1_oitcd")]
 event_info = ExtResource("2_qc3go")
-mini_game = ExtResource("3_dm8ux")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(4, -32)
