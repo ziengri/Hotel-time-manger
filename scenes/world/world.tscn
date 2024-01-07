@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dcf2bm3q7t60w" path="res://scenes/world/Spawner/spawner.tscn" id="7_t55ao"]
 [ext_resource type="Texture2D" uid="uid://d2lvo8o0n8yyk" path="res://scenes/world/Items_1_16x16.png" id="7_u3wj6"]
 [ext_resource type="PackedScene" uid="uid://cyx2kk6f3wrqb" path="res://Room/Room.tscn" id="8_jrdv0"]
-[ext_resource type="PackedScene" uid="uid://bxdkfheg87i8i" path="res://IntercatebleItem/char.tscn" id="9_kby3m"]
+[ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="9_kby3m"]
 [ext_resource type="PackedScene" uid="uid://b7wir6v0viwtk" path="res://scenes/ui/hud.tscn" id="11_w2i7n"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_es0aj"]
