@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddp34gt1hbmc7"]
+
+[ext_resource type="Script" path="res://MiniGames/FightBomj/game.gd" id="1_0fnpp"]
+[ext_resource type="Texture2D" uid="uid://ophl8tgtd8h8" path="res://MiniGames/FightBomj/resourses/floor_bomj.png" id="2_olk6g"]
+[ext_resource type="Texture2D" uid="uid://bvldesrdcfn71" path="res://MiniGames/FightBomj/resourses/bomj_head1.png" id="3_eut0y"]
+[ext_resource type="Texture2D" uid="uid://hgdvlomgxbey" path="res://MiniGames/FightBomj/resourses/glow.png" id="4_vs2k7"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_0fnpp")
+
+[node name="Laundry" type="Sprite2D" parent="."]
+position = Vector2(224, 128)
+texture = ExtResource("2_olk6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(224, 120)
+texture = ExtResource("3_eut0y")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/Area2D"]
+position = Vector2(-0.500009, -4.76837e-07)
+scale = Vector2(8.05, 8.5)
+polygon = PackedVector2Array(2.42236, 10, 7.76398, 7.41176, 9.75155, 2.82353, 9.75155, -2.82353, 6.52174, -9.64706, -4.40993, -10.2353, -9.75155, -4.35294, -10, 1.52941, -7.26708, 7.41176, -2.54658, 10.1176)
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 448.0
+offset_bottom = 248.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Container"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 217.0
+offset_right = 400.0
+offset_bottom = 240.0
+text = "Срази бомжа в поединке"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Container"]
+visible = false
+layout_mode = 0
+offset_left = 128.0
+offset_top = 5.0
+offset_right = 320.0
+offset_bottom = 32.0
+step = 1.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(351, 183)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_vs2k7")

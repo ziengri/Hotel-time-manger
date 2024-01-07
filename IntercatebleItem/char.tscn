@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_8snkn"]
 [ext_resource type="Texture2D" uid="uid://cxwx52sdfgeqb" path="res://IntercatebleItem/Item_singles_16.png" id="2_j3vyi"]
 [ext_resource type="Script" path="res://events/event_res.gd" id="3_6kgqn"]
-[ext_resource type="PackedScene" uid="uid://dqln0qvuu1nbe" path="res://MiniGames/RoomCleaning/room_cleaning.tscn" id="4_2ud48"]
+[ext_resource type="PackedScene" uid="uid://djjr45fquew7q" path="res://MiniGames/FightBomj/fight_bomj_game.tscn" id="4_q0txc"]
 
 [sub_resource type="Resource" id="Resource_1uthr"]
 script = ExtResource("3_6kgqn")
@@ -19,7 +19,7 @@ size = Vector2(20, 17)
 
 [node name="Char" instance=ExtResource("1_8snkn")]
 event_info = SubResource("Resource_1uthr")
-mini_game = ExtResource("4_2ud48")
+mini_game = ExtResource("4_q0txc")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -10)

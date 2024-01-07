@@ -22,13 +22,10 @@ func init_AstarGrid() -> void:
 	AStarGrid.default_estimate_heuristic = 1
 	AStarGrid.diagonal_mode = 1
 	
-	var cells = tile_map.get_used_cells(0)
+	var cells = tile_map.get_used_cells(1)
 	cells.sort()
 	
 	for cell_id in range(cells.size()):
 		var cell = cells[cell_id]
-		
-		
-		#if tile_map.get_cell_tile_data(0,cell).get_custom_data("is_floor") != true:
 		if tile_map.get_cell_source_id(1,cell) != -1:
 			AStarGrid.set_point_solid(cell, true)

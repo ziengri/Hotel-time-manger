@@ -10,7 +10,7 @@ var direction : Vector2
 @onready var states: StateMachine = $States
 @onready var animTree: AnimationTree = $AnimationTree
 @onready var animState = animTree.get("parameters/playback")
-
+@onready var tile_map: TileMap = get_tree().get_current_scene().get_node("TileMap")
 
 
 func _ready():
@@ -21,7 +21,8 @@ func _ready():
 func _unhandled_input(event):
 	states.input(event)
 	if Input.is_action_just_pressed("ui_select"):
-		return
+		var p = tile_map.local_to_map(position)
+		print(tile_map.get_cell_source_id(0,p))
 
 
 func _physics_process(delta):

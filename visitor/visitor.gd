@@ -71,6 +71,7 @@ func _physics_process(delta):
 func move():
 	position = position.move_toward(tile_map.map_to_local(path[0]),1.5)
 	
+	#tile_map.set_cell(0,path[0],1,Vector2i(1,1))
 	if position == tile_map.map_to_local(path[0]):
 		path.remove_at(0)
 
