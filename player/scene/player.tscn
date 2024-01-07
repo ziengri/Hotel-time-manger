@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://dhgaakckrherw"]
 
 [ext_resource type="Script" path="res://player/scene/player.gd" id="1_r7bgg"]
-[ext_resource type="Texture2D" uid="uid://myk07bkksue4" path="res://player/texture/Character_sprite_1.png" id="2_bg5fh"]
+[ext_resource type="Texture2D" uid="uid://myk07bkksue4" path="res://player/texture/Character_sprite_0.png" id="2_bg5fh"]
 [ext_resource type="FontFile" uid="uid://pmcd3nlbdqsv" path="res://theme/better-vcr-5.2.ttf" id="3_84khi"]
 [ext_resource type="Script" path="res://player/scene/player_states.gd" id="3_klbyr"]
 [ext_resource type="Script" path="res://player/scene/idle.gd" id="4_oxyia"]
