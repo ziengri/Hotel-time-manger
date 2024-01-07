@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://beoexruwllm17" path="res://InteractArea/InteractArea.tscn" id="3_q1212"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgd3q"]
-size = Vector2(16, 20)
+size = Vector2(24, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtn3x"]
 size = Vector2(20, 28)
@@ -13,13 +13,14 @@ size = Vector2(20, 28)
 [node name="Trash" type="Sprite2D"]
 texture = ExtResource("1_immtg")
 region_enabled = true
-region_rect = Rect2(47.3772, 126.218, 15.9736, 17.9544)
+region_rect = Rect2(340.079, 261.729, 25.9451, 26.2153)
 script = ExtResource("2_y0sbr")
 metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_vgd3q")
 
 [node name="InteractArea" parent="." instance=ExtResource("3_q1212")]

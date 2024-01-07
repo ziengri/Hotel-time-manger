@@ -37,7 +37,7 @@ func close_machine(viewport, event:InputEventMouseButton, shape_idx):
 		washing_machine_game.visible=true
 		washing_machine_clothes.get_parent().visible=false
 		washing_machine_clothes.input_event.disconnect(load_machine)
-		hint.text= "А теперь крути баран по часов стрелке"
+		hint.text= "А теперь крути барабан"
 		pregress_bar.max_value = washing_machine_game.MAX_NEED_ROTATION_DEGRESS
 		washing_machine_game.progress_bar = pregress_bar
 		pregress_bar.show()

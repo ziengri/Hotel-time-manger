@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm2w7q1xcsb4o"]
+
+[ext_resource type="Texture2D" uid="uid://d2lvo8o0n8yyk" path="res://scenes/world/Items_1_16x16.png" id="1_at8dr"]
+[ext_resource type="Script" path="res://IntercatebleItem/Washing_machine/washing_machine.gd" id="2_qqs2i"]
+[ext_resource type="PackedScene" uid="uid://beoexruwllm17" path="res://InteractArea/InteractArea.tscn" id="3_23mpd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n33t0"]
+size = Vector2(16, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y47l6"]
+size = Vector2(20, 28)
+
+[node name="washing_machine" type="Sprite2D"]
+texture = ExtResource("1_at8dr")
+region_enabled = true
+region_rect = Rect2(48, 28, 16, 20)
+script = ExtResource("2_qqs2i")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_n33t0")
+
+[node name="InteractArea" parent="." instance=ExtResource("3_23mpd")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_y47l6")

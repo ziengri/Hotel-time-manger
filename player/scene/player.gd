@@ -33,7 +33,7 @@ func _ready():
 func _unhandled_input(event):
 	states.input(event)
 	if Input.is_action_just_pressed("ui_select"):
-		object_in_hands = ObjectHold.FOOD
+		object_in_hands = ObjectHold.DIRTY
 		var p = tile_map.local_to_map(position)
 		print(tile_map.get_cell_source_id(0,p))
 
