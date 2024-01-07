@@ -13,10 +13,10 @@ Time_to_event = 60
 After_Action = 0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7bga"]
-size = Vector2(31, 31)
+size = Vector2(23, 12.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcnl3"]
-size = Vector2(30, 28)
+size = Vector2(24, 16)
 
 [node name="InteractableItem" type="Node2D" groups=["interactable_items"]]
 y_sort_enabled = true
