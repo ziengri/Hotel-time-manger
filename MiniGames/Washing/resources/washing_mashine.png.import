@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn5y3qjs0k3pr"
-path="res://.godot/imported/border_tank.png-a32ad83f4b5b010d944f8256cecccfa9.ctex"
+uid="uid://cnregsw58pcfl"
+path="res://.godot/imported/washing_mashine.png-0ddb9a00e191c8be535bdbee1c1605e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MiniGames/RoomCleaning/resources/border_tank.png"
-dest_files=["res://.godot/imported/border_tank.png-a32ad83f4b5b010d944f8256cecccfa9.ctex"]
+source_file="res://MiniGames/Washing/resources/washing_mashine.png"
+dest_files=["res://.godot/imported/washing_mashine.png-0ddb9a00e191c8be535bdbee1c1605e1.ctex"]
 
 [params]
 

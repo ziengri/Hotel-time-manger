@@ -1,51 +1,52 @@
 extends Node2D
 
-@onready var washing_machine_clothes :Area2D = $WashingMashineClothes/Area2D
-@onready var washing_machine_open :Area2D = $WashingMashineOpen/Area2D
-@onready var washing_machine :Area2D = $WashingMashine/Area2D
-@onready var pregress_bar :ProgressBar = $Container/ProgressBar
+@onready var hint :Label  =$Label
+@onready var progress_bar :ProgressBar = $ProgressBar
 
+@onready var carpet :Sprite2D= $Carpet
 
-@onready var washing_machine_game :Node2D = $Mashine_full
-@onready var hint :Label  =$Container/Label
+var ITEMS_COUNT :int = 13
+var items_clear = 0
+# Called when the node enters the scene tree for the first time.
 
 func _ready():
-	washing_machine.input_event.connect(open_machine)
-	washing_machine.mouse_entered.connect(func(): print('hello!'))
+	progress_bar.max_value = ITEMS_COUNT
+	for i in range(0,ITEMS_COUNT):
+		spawn_item()
 
-func open_machine(viewport, event:InputEventMouseButton, shape_idx):
-	print(event)
-	if event.button_index == 1:
-		washing_machine_open.get_parent().visible=true
-		washing_machine.get_parent().visible=false
-		washing_machine.input_event.disconnect(open_machine)
-		hint.text= "Положи вещи в стиралку"
-		await get_tree().create_timer(0.4).timeout
-		washing_machine_open.input_event.connect(load_machine)
+func spawn_item()->void:
+	var trash_scenes : Array = DirAccess.open("res://MiniGames/RoomCleaning/trash/").get_files()
 	
-func load_machine(viewport, event:InputEventMouseButton, shape_idx):
-	if event.button_index == 1:
-		washing_machine_clothes.get_parent().visible=true
-		washing_machine_open.get_parent().visible=false
-		washing_machine_open.input_event.disconnect(load_machine)
-		hint.text= "Закрой дверцу"
-		await get_tree().create_timer(0.4).timeout
-		washing_machine_clothes.input_event.connect(close_machine)
+	var trash_new :BaseTrash = load("res://MiniGames/RoomCleaning/trash/"+trash_scenes.pick_random()).instantiate()
+	add_child(trash_new)
+	trash_new.item_clear.connect(on_item_clear)
+	#var max_y  =  trash_new.sprite.texture.get_height()
+	var max_y  = int((carpet.texture.get_height() - trash_new.sprite.texture.get_height()))
+	var max_x  = int((carpet.texture.get_width() - trash_new.sprite.texture.get_width()))
 	
-func close_machine(viewport, event:InputEventMouseButton, shape_idx):
-	if event.button_index == 1:
-		washing_machine_game.visible=true
-		washing_machine_clothes.get_parent().visible=false
-		washing_machine_clothes.input_event.disconnect(load_machine)
-		hint.text= "А теперь крути баран по часов стрелке"
-		pregress_bar.max_value = washing_machine_game.MAX_NEED_ROTATION_DEGRESS
-		washing_machine_game.progress_bar = pregress_bar
-		pregress_bar.show()
-		await get_tree().create_timer(0.4).timeout
-		washing_machine_game.process_mode = Node.PROCESS_MODE_PAUSABLE
+	var trash_position :Vector2 = Vector2(randi_range(0,max_x),randi_range(0,max_y))
+	trash_new.global_position = trash_position
+
+	
+	
+func on_item_clear()->void:
+	items_clear+=1
+	progress_bar.value = items_clear
+	if(items_clear>= ITEMS_COUNT):
+		finish_game()
+		
 
 func finish_game():
 	hint.text= "Готово"
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.4).timeout
 	get_parent().finish_game()
 
+
+func _process(delta):
+	pass
+
+		#degress_of_ratation += int(abs(old_degress - full_tank.rotation_degrees))
+		#progress_bar.value = degress_of_ratation
+		#if degress_of_ratation >= MAX_NEED_ROTATION_DEGRESS:
+			#process_mode= Node.PROCESS_MODE_DISABLED
+			#get_parent().finish_game()

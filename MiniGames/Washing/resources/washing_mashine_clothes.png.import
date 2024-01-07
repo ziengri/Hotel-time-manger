@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnregsw58pcfl"
-path="res://.godot/imported/washing_mashine.png-dde242ed766cf94380ea4b5d9f5089bb.ctex"
+uid="uid://cr825xdybi12r"
+path="res://.godot/imported/washing_mashine_clothes.png-1e2671b03d4a5b0e361aade3fe9cb31f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MiniGames/RoomCleaning/resources/washing_mashine.png"
-dest_files=["res://.godot/imported/washing_mashine.png-dde242ed766cf94380ea4b5d9f5089bb.ctex"]
+source_file="res://MiniGames/Washing/resources/washing_mashine_clothes.png"
+dest_files=["res://.godot/imported/washing_mashine_clothes.png-1e2671b03d4a5b0e361aade3fe9cb31f.ctex"]
 
 [params]
 

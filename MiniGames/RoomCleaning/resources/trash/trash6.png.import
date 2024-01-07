@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwamhyft50buj"
-path="res://.godot/imported/full_tank.png-456ef29705eeb06611393840e9ab72bf.ctex"
+uid="uid://bd421itjbfa4s"
+path="res://.godot/imported/trash6.png-bf83648320c73d3ef8b618efc867098e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MiniGames/RoomCleaning/resources/full_tank.png"
-dest_files=["res://.godot/imported/full_tank.png-456ef29705eeb06611393840e9ab72bf.ctex"]
+source_file="res://MiniGames/RoomCleaning/resources/trash/trash6.png"
+dest_files=["res://.godot/imported/trash6.png-bf83648320c73d3ef8b618efc867098e.ctex"]
 
 [params]
 

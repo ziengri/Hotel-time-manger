@@ -3,7 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_8snkn"]
 [ext_resource type="Texture2D" uid="uid://cxwx52sdfgeqb" path="res://IntercatebleItem/Item_singles_16.png" id="2_j3vyi"]
 [ext_resource type="Script" path="res://events/event_res.gd" id="3_6kgqn"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://djjr45fquew7q" path="res://MiniGames/FightBomj/fight_bomj_game.tscn" id="4_q0txc"]
+=======
+[ext_resource type="PackedScene" uid="uid://dqln0qvuu1nbe" path="res://MiniGames/Washing/washing_game.tscn" id="4_2ud48"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Resource" id="Resource_1uthr"]
 script = ExtResource("3_6kgqn")
