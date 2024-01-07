@@ -24,6 +24,7 @@ func start_event()->void:
 	print("ВОЗОМЖНО ВЗАИМОДЕЙСТВИЕ")
 
 func finish_event()->void:
+	Stats.player.set_physics_process(true)
 	EventManager.finish_event(room,event_info)
 	state = ItemState.NonActive
 	room.visitor.states.change_state(BaseStateVisitor.State.IDLEEVENT)
@@ -44,6 +45,8 @@ func make_interaction()->void:
 		add_child(mini_game_scene)
 		mini_game_scene.visible =true
 		mini_game_scene.game_finish.connect(finish_event)
+		
+		Stats.player.set_physics_process(false)
 		print("ВЫПОЛНЯЕМ ИГРУ")
 		
 		game_started = true
