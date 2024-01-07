@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbn2c71khdc2n"]
+
+[ext_resource type="Script" path="res://MiniGames/base_game.gd" id="1_jeat0"]
+[ext_resource type="PackedScene" uid="uid://ruytfghiixxu" path="res://MiniGames/Coocing/game.tscn" id="2_6tf2t"]
+
+[node name="Coocing" type="CanvasLayer"]
+script = ExtResource("1_jeat0")
+
+[node name="Game" parent="." instance=ExtResource("2_6tf2t")]
