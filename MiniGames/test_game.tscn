@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4pjp0ei27lu0"]
+
+[ext_resource type="Script" path="res://MiniGames/base_game.gd" id="1_xvk8a"]
+[ext_resource type="Script" path="res://MiniGames/test_game.gd" id="2_cvofc"]
+
+[node name="TestGame" type="CanvasLayer"]
+script = ExtResource("1_xvk8a")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "OK
+"
+script = ExtResource("2_cvofc")
