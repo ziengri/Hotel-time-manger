@@ -16,34 +16,35 @@ func _ready():
 	print(need_rotation_degress)
 	white_noise.play("default")
 	white_noise.modulate = Color(1,1,1,1)
-	point = randi_range(-10,+10)
+	point = randi_range(-3,+3)
 	timer.timeout.connect(check)
 	
 var wait: bool = false
 var point: float
+var range: float = 0.2
 func _process(delta):
 	var btn_degress = 0
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		television_button.look_at(get_viewport().get_mouse_position())
 		btn_degress = television_button.rotation
-	#print(television_button.rotation)
+	print(television_button.rotation)
 	
-	television_button.rotation = clamp(television_button.rotation,-10,+10)
+	television_button.rotation = clamp(television_button.rotation,-3,+3)
 	
-	if television_button.rotation >= point and television_button.rotation <= point+0.5:
+	if television_button.rotation >= point and television_button.rotation <= range:
 		white_noise.modulate.a = lerp(white_noise.modulate.a ,0.0, 000.1)
 	else:
 		white_noise.modulate.a = lerp(white_noise.modulate.a ,1.0, 000.1)
 	
 	#print(white_noise.modulate,"/",Color(1,1,1,0))
-	if television_button.rotation >= point and television_button.rotation <= point+0.5 and wait == false:
+	if television_button.rotation >= point and television_button.rotation <= range and wait == false:
 		timer.start(1)
 		wait = true
 	
 	#print(point," / ",point+0.5)
 func check():
 	wait = false
-	if television_button.rotation >= point and television_button.rotation <= point+0.5:
+	if television_button.rotation >= point and television_button.rotation <= range:
 		if white_noise.modulate.a < 0.05 != true:
 			return
 		set_process(false)
