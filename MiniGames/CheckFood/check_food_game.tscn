@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8yh5i3w2ji0e"]
+
+[ext_resource type="Script" path="res://MiniGames/base_game.gd" id="1_jc7xb"]
+[ext_resource type="Script" path="res://MiniGames/CheckFood/check_food.gd" id="2_gu4hq"]
+
+[node name="CheckFoodGame" type="CanvasLayer"]
+script = ExtResource("1_jc7xb")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_gu4hq")

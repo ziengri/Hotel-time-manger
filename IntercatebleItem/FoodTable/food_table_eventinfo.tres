@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventInfo" load_steps=2 format=3 uid="uid://crywalp6xe8ag"]
+
+[ext_resource type="Script" path="res://events/event_res.gd" id="1_bqypq"]
+
+[resource]
+script = ExtResource("1_bqypq")
+Alias = "Еда в номер"
+Reward = 10
+Time_to_event = 30
+After_Action = 0

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cghi2py7q5orr"]
+
+[ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_svpfe"]
+[ext_resource type="Resource" uid="uid://crywalp6xe8ag" path="res://IntercatebleItem/FoodTable/food_table_eventinfo.tres" id="2_386te"]
+[ext_resource type="Texture2D" uid="uid://br50ootmvd1ij" path="res://textures/world/16x16/Items_1_16x16.png" id="2_pasxn"]
+
+[node name="InteractableItem" instance=ExtResource("1_svpfe")]
+event_info = ExtResource("2_386te")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -5)
+texture = ExtResource("2_pasxn")
+region_enabled = true
+region_rect = Rect2(161.789, 157.789, 28.2237, 20.5263)
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0.5, -3.75)
+
+[node name="CollisionShape2D" parent="InteractArea" index="0"]
+position = Vector2(0, -6)
