@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://b583ajbougtip"]
+
+[ext_resource type="Texture2D" uid="uid://d2lvo8o0n8yyk" path="res://scenes/world/Items_1_16x16.png" id="1_kgvjl"]
+[ext_resource type="Script" path="res://IntercatebleItem/CookingStove/cooking_stove.gd" id="2_fcf28"]
+[ext_resource type="PackedScene" uid="uid://beoexruwllm17" path="res://InteractArea/InteractArea.tscn" id="3_aa451"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2y0fw"]
+size = Vector2(16, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v24c0"]
+size = Vector2(20, 28)
+
+[node name="static_decor26" type="Sprite2D"]
+texture = ExtResource("1_kgvjl")
+region_enabled = true
+region_rect = Rect2(224.258, 304.123, 16.1046, 15.4517)
+script = ExtResource("2_fcf28")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_2y0fw")
+
+[node name="InteractArea" parent="." instance=ExtResource("3_aa451")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_v24c0")

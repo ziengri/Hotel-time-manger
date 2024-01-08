@@ -28,9 +28,11 @@ func on_event_list_removed(room_id,event_info):
 func on_stats_changed():
 	var num = Stats.stars
 	for star in $HFlowContainer/Stars.get_children():
-		if num == 0: star.play("0")
+		if num == 0: 
+			if star.animation != "0": star.play("0")
 		else: 
-			star.play("1")
+			if star.animation != "2": star.play("1")
+			#if star.animation == "0": star.play("1")
 			num -= 1
 	money.text = str(Stats.money)
 
