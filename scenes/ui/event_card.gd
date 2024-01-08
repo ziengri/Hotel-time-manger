@@ -12,7 +12,7 @@ var room_id : int
 
 func _ready()->void:
 	event_alias.text = event_info['event_info'].Alias
-	room_number.text = str(room_id)
+	room_number.text = "Комната: " + str(room_id)
 	progress_bar.max_value = int(event_info['timer'].wait_time)
 	
 	create_tween()

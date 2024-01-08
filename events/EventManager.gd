@@ -43,16 +43,15 @@ func add_to_eventList(room:Room,event_info:EventInfo,timer:Timer)->void:
 	
 func on_event_fail(room:Room,event_info:EventInfo)->void:
 	room.visitor.states.change_state(BaseStateVisitor.State.IDLEEVENT)	
-	if event_info.Alias == "Не работает телевизор":
-		var inter_items_node = room.get_child(0)
-		var inter_items = inter_items_node.get_children()
-		for inter_item in inter_items:
-			print(inter_item.get_name())
-			if inter_item.get_name() == "TV":
-				inter_item.state = InteractableItem.ItemState.NonActive
-				if inter_item.get_child(inter_item.get_child_count()-1).get_name() == "TvRepairGame":
-					Stats.player.set_physics_process(true)
-					inter_item.get_child(inter_item.get_child_count()-1).queue_free()
+	var inter_items_node = room.get_child(0)
+	var inter_items = inter_items_node.get_children()
+	for inter_item in inter_items:
+		print(inter_item.get_name())
+		inter_item.state = InteractableItem.ItemState.NonActive
+		if inter_item.get_name() == "TV":
+			if inter_item.get_child(inter_item.get_child_count()-1).get_name() == "TvRepairGame":
+				Stats.player.set_physics_process(true)
+				inter_item.get_child(inter_item.get_child_count()-1).queue_free()
 	remove_event_from_list(room,event_info)
 	Stats.stars-=1
 	print("EVENT FAIL")

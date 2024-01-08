@@ -19,7 +19,7 @@ func _ready():
 	progress_bar.max_value = 10000
 
 func on_fire(viewport, event:InputEventMouseButton, shape_idx):
-	label.text = "отжарь эту цыпочку как следует"
+	label.text = "Используй A/D что бы не дать сбежать курочке с плиты"
 	area_2d_1.input_event.disconnect(on_fire)
 	$Sprite2D.texture = load("res://MiniGames/Coocing/resourses/kitchen_stove_on.png")
 	pan.position.x = fire.x

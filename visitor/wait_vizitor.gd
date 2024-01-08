@@ -6,7 +6,7 @@ extends BaseStateVisitor
 
 func enter()->void:
 	player.dissatisfaction.show()
-	timer.start(90)
+	timer.start(60)
 	player.dissatisfaction.max_value = timer.wait_time
 	return
 

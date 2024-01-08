@@ -6,7 +6,7 @@ func _ready():
 	event_timer.timeout.connect(start_event)
 
 func enter()->void:
-	event_timer.start(3)
+	event_timer.start(randi_range(5,15))
 	
 func start_event()->void:
 	

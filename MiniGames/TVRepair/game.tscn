@@ -72,7 +72,7 @@ offset_left = 48.0
 offset_top = 217.0
 offset_right = 400.0
 offset_bottom = 240.0
-text = "Крути чтобы настроить сигнал"
+text = "Зажимай и крути чтобы настроить сигнал"
 horizontal_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Container"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7ul81rrvmcfs"]
 
-[ext_resource type="Texture2D" uid="uid://d2lvo8o0n8yyk" path="res://scenes/world/Items_1_16x16.png" id="1_uqjp1"]
+[ext_resource type="Texture2D" uid="uid://mj2ns13u5rbx" path="res://textures/world/furniture spritesheet.png" id="1_kqm6s"]
 [ext_resource type="Script" path="res://IntercatebleItem/CookingStove/cooking_stove.gd" id="2_wwni3"]
 [ext_resource type="PackedScene" uid="uid://beoexruwllm17" path="res://InteractArea/InteractArea.tscn" id="3_oxhrs"]
 
@@ -11,9 +11,10 @@ size = Vector2(16, 20)
 size = Vector2(20, 28)
 
 [node name="static_decor26" type="Sprite2D"]
-texture = ExtResource("1_uqjp1")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_kqm6s")
 region_enabled = true
-region_rect = Rect2(79.755, 27.7835, 16.7562, 20.8101)
+region_rect = Rect2(84.7562, 153.188, 14.7292, 16.3508)
 script = ExtResource("2_wwni3")
 metadata/_edit_group_ = true
 

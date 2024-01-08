@@ -32,16 +32,16 @@ size_flags_vertical = 0
 position = Vector2(4, 4)
 
 [node name="StarUi2" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
-position = Vector2(37, 7)
+position = Vector2(37, 4)
 
 [node name="StarUi3" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
-position = Vector2(69, 3)
+position = Vector2(69, 4)
 
 [node name="StarUi4" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
-position = Vector2(105, 3)
+position = Vector2(102, 4)
 
 [node name="StarUi5" parent="HFlowContainer/Stars" instance=ExtResource("2_khlgv")]
-position = Vector2(145, 4)
+position = Vector2(134, 4)
 
 [node name="MarginContainer" type="MarginContainer" parent="HFlowContainer"]
 custom_minimum_size = Vector2(490, 0)

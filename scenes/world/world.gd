@@ -7,6 +7,7 @@ class_name World
 
 
 func _ready():
+	Stats.player = $CharacterBody2D
 	init_AstarGrid()
 
 

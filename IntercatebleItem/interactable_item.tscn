@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://by3gp3ty5tmdq"]
+[gd_scene load_steps=10 format=3 uid="uid://by3gp3ty5tmdq"]
 
 [ext_resource type="Script" path="res://IntercatebleItem/InteractableItem.gd" id="1_antil"]
 [ext_resource type="Script" path="res://events/event_res.gd" id="2_rag7a"]
@@ -11,6 +11,35 @@ Alias = "event"
 Reward = 5
 Time_to_event = 60
 After_Action = 0
+
+[sub_resource type="Shader" id="Shader_ekqy4"]
+code = "shader_type canvas_item;
+//uniform vec4 line_color: hint
+uniform vec4 line_color = vec4(1.0);
+uniform float line_thickness : hint_range(0, 10) = 0.5;
+
+const vec2 OFFSETS[8] = {
+	vec2(-1, -1), vec2(-1, 0), vec2(-1, 1), vec2(0, -1), vec2(0, 1), 
+	vec2(1, -1), vec2(1, 0), vec2(1, 1)
+};
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+	float outline = 0.0;
+	
+	for (int i = 0; i < OFFSETS.length(); i++) {
+		outline += texture(TEXTURE, UV + size * OFFSETS[i]).a;
+	}
+	outline = min(outline, 1.0);
+	
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = mix(color, line_color, outline - color.a);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wiqnq"]
+shader = SubResource("Shader_ekqy4")
+shader_parameter/line_color = Vector4(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7bga"]
 size = Vector2(14, 13)
@@ -25,6 +54,7 @@ event_info = SubResource("Resource_4fuml")
 mini_game = ExtResource("3_r68go")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wiqnq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

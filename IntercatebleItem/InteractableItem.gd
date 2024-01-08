@@ -4,6 +4,7 @@ class_name InteractableItem
 
 @export var event_info : EventInfo 
 @onready var interact_area :InteractArea = $InteractArea as InteractArea
+@onready var sprite : Sprite2D = $Sprite2D
 
 @export var mini_game :PackedScene
 var room:Room
@@ -15,7 +16,12 @@ enum ItemState{
 	Active,
 }
 
-var state = ItemState.NonActive 
+var state :ItemState = ItemState.NonActive : set = set_state
+func set_state(new_state):
+	if new_state == ItemState.NonActive : sprite.material.set('shader_parameter/line_thickness',0.0)
+	if new_state == ItemState.Active : sprite.material.set('shader_parameter/line_thickness',1.0)
+	state = new_state
+
 var game_started: bool = false
 
 func start_event()->void:

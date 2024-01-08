@@ -21,8 +21,12 @@ enum RoomStatus{
 func set_status(new_status)->void:
 	if new_status == RoomStatus.DIRTY:
 		broom.visible = true
+		sign.text = "X"
+		sign.modulate = Color.FIREBRICK
 		start_clean_room_event()
 	else:
+		sign.text = str(room_id)
+		sign.modulate = Color.WHITE
 		broom.visible = false
 	status = new_status
 	
@@ -33,6 +37,7 @@ func _ready():
 
 func start_clean_room_event()->void:
 	broom.start_event()
+	broom.visible = true
 	
 	
 func generate_event():

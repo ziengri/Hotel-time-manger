@@ -12,11 +12,14 @@ script = ExtResource("1_7l2nr")
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="Broom" parent="." instance=ExtResource("2_ine47")]
+scale = Vector2(0.5, 0.5)
 
 [node name="Sign" type="Sprite2D" parent="."]
+z_index = 1
 texture = ExtResource("3_djase")
 
 [node name="Label" type="Label" parent="Sign"]
+z_index = 2
 offset_left = -5.0
 offset_top = -7.0
 offset_right = 7.0
