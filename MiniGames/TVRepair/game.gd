@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var white_noise = $AnimatedSprite2D
 @onready var television_button = $TelevisionButton
+@onready var broken_tv = $broken_tv
 
 var need_rotation_degress :int
 var inaccuracy_degress : int = 100
@@ -17,6 +18,7 @@ func _ready():
 	white_noise.play("default")
 	white_noise.modulate = Color(1,1,1,1)
 	point = randi_range(-3,+3)
+	range = point + range
 	timer.timeout.connect(check)
 	
 var wait: bool = false
@@ -49,7 +51,7 @@ func check():
 			return
 		set_process(false)
 		$Container/Label.text= "Готово"
-		await get_tree().create_timer(21).timeout
+		await get_tree().create_timer(1).timeout
 		get_parent().finish_game()
 		wait = false
 ## Called every frame. 'delta' is the elapsed time since the previous frame.

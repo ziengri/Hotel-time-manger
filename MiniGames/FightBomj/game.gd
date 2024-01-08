@@ -9,7 +9,6 @@ var hp: int = 50
 #var text: Array["Отлично!",""]
 
 func _ready():
-	fight_sound.play(0.5)
 	area_2d.input_event.connect(hit)
 	progress_bar.max_value = hp
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
