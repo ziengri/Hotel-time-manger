@@ -21,6 +21,8 @@ func _ready():
 		queue_free()
 		return
 	set_physics_process(false)
+	print("Поставили фалсу 6")
+
 	_user_data_directory = DirAccess.open("user://")
 	if !_user_data_directory:
 		printerr("ScreenshotMgr: could not open user data directory")
@@ -57,6 +59,8 @@ func _input(event):
 		print("screenshots will be saved to:\r\n%s%s%s" % [_user_data_dir, _path_separator, _directory_name])
 		_stopwatch.start()
 		set_physics_process(true)
+		print("Поставили тру 6")
+
 	else:
 		_stopwatch.stop()
 		var seconds = _stopwatch.get_elapsed_msec() / 1000.0
@@ -64,6 +68,8 @@ func _input(event):
 		print("stopping screenshots")
 		print("Stats: files: %d, elapsed seconds: %f, file/sec: %f" % [_file_counter, seconds, files_per_sec])
 		set_physics_process(false)
+		print("Поставили фалсу 6")
+
 
 
 func get_date_time_string():
@@ -80,6 +86,8 @@ func _physics_process(delta):
 		var files_per_sec = _file_counter / seconds
 		print("Stats: files: %d, elapsed seconds: %f, file/sec: %f" % [_file_counter, seconds, files_per_sec])
 		set_physics_process(false)
+		print("Поставили фалсу 6")
+
 		return
 	
 	_time_since_last_frame += delta

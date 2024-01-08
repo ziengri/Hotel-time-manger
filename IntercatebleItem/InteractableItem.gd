@@ -25,6 +25,7 @@ func start_event()->void:
 
 func finish_event()->void:
 	Stats.player.set_physics_process(true)
+	print("Поставили тру 1")
 	EventManager.finish_event(room,event_info)
 	state = ItemState.NonActive
 	if event_info.After_Action != event_info.after_actions.ROOM_CLEAR:
@@ -44,15 +45,21 @@ func _ready()->void:
 func make_interaction()->void:
 	if state == ItemState.Active:
 		if game_started: return
-		
-		var mini_game_scene : MiniGame = mini_game.instantiate() as MiniGame
-		add_child(mini_game_scene)
-		mini_game_scene.visible =true
-		mini_game_scene.game_finish.connect(finish_event)
-		
 		Stats.player.set_physics_process(false)
+		print("Поставили фалсу 2")
+		var mini_game_scene : MiniGame = mini_game.instantiate() as MiniGame
+		mini_game_scene.game_finish.connect(finish_event)
+		mini_game_scene.game_cancel.connect(cancel_interct)
 		print("ВЫПОЛНЯЕМ ИГРУ")
 		
 		game_started = true
+		add_child(mini_game_scene)
+		mini_game_scene.visible =true
 	else:
 		pass
+func cancel_interct():
+	print("CANCEL ИГРУ")
+	game_started = false
+	Stats.player.set_physics_process(true)
+	print("Поставили тру 3")
+

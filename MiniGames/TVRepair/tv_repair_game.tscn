@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://qpo60otevwiq"]
+
+[ext_resource type="Script" path="res://MiniGames/base_game.gd" id="1_hwlg7"]
+[ext_resource type="PackedScene" uid="uid://cxnahs717husc" path="res://MiniGames/TVRepair/game.tscn" id="2_m70x1"]
+
+[node name="TvRepairGame" type="CanvasLayer"]
+script = ExtResource("1_hwlg7")
+
+[node name="game" parent="." instance=ExtResource("2_m70x1")]

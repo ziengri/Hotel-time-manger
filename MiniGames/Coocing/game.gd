@@ -15,7 +15,7 @@ var progress_point = 36
 func _ready():
 	area_2d_1.input_event.connect(on_fire)
 	timer.timeout.connect(random)
-	progress_bar.max_value = 20000
+	progress_bar.max_value = 10000
 
 func on_fire(viewport, event:InputEventMouseButton, shape_idx):
 	label.text = "отжарь эту цыпочку как следует"

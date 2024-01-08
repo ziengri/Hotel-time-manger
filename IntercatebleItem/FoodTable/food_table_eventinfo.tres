@@ -6,5 +6,5 @@
 script = ExtResource("1_bqypq")
 Alias = "Еда в номер"
 Reward = 10
-Time_to_event = 30
+Time_to_event = 60
 After_Action = 0

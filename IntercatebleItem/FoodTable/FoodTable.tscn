@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cghi2py7q5orr"]
+[gd_scene load_steps=5 format=3 uid="uid://cghi2py7q5orr"]
 
 [ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_svpfe"]
 [ext_resource type="Resource" uid="uid://crywalp6xe8ag" path="res://IntercatebleItem/FoodTable/food_table_eventinfo.tres" id="2_386te"]
 [ext_resource type="Texture2D" uid="uid://br50ootmvd1ij" path="res://textures/world/16x16/Items_1_16x16.png" id="2_pasxn"]
+[ext_resource type="PackedScene" uid="uid://c8yh5i3w2ji0e" path="res://MiniGames/CheckFood/check_food_game.tscn" id="3_fuf00"]
 
-[node name="InteractableItem" instance=ExtResource("1_svpfe")]
+[node name="FoodTable" instance=ExtResource("1_svpfe")]
 event_info = ExtResource("2_386te")
+mini_game = ExtResource("3_fuf00")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -5)

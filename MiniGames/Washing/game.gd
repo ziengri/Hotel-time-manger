@@ -18,7 +18,7 @@ func open_machine(viewport, event:InputEventMouseButton, shape_idx):
 	if event.button_index == 1:
 		washing_machine_open.get_parent().visible=true
 		washing_machine.get_parent().visible=false
-		washing_machine.input_event.disconnect(open_machine)
+		#washing_machine.input_event.disconnect(open_machine)
 		hint.text= "Положи вещи в стиралку"
 		await get_tree().create_timer(0.4).timeout
 		washing_machine_open.input_event.connect(load_machine)
@@ -27,7 +27,7 @@ func load_machine(viewport, event:InputEventMouseButton, shape_idx):
 	if event.button_index == 1:
 		washing_machine_clothes.get_parent().visible=true
 		washing_machine_open.get_parent().visible=false
-		washing_machine_open.input_event.disconnect(load_machine)
+		#washing_machine_open.input_event.disconnect(load_machine)
 		hint.text= "Закрой дверцу"
 		await get_tree().create_timer(0.4).timeout
 		washing_machine_clothes.input_event.connect(close_machine)
@@ -36,7 +36,7 @@ func close_machine(viewport, event:InputEventMouseButton, shape_idx):
 	if event.button_index == 1:
 		washing_machine_game.visible=true
 		washing_machine_clothes.get_parent().visible=false
-		washing_machine_clothes.input_event.disconnect(load_machine)
+		#washing_machine_clothes.input_event.disconnect(load_machine)
 		hint.text= "А теперь крути барабан"
 		pregress_bar.max_value = washing_machine_game.MAX_NEED_ROTATION_DEGRESS
 		washing_machine_game.progress_bar = pregress_bar

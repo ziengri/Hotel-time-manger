@@ -6,5 +6,5 @@
 [node name="CheckFoodGame" type="CanvasLayer"]
 script = ExtResource("1_jc7xb")
 
-[node name="Node" type="Node" parent="."]
+[node name="Node" type="Node2D" parent="."]
 script = ExtResource("2_gu4hq")

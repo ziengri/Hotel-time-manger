@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventInfo" load_steps=2 format=3 uid="uid://vjewc56ffeq2"]
+
+[ext_resource type="Script" path="res://events/event_res.gd" id="1_72mgs"]
+
+[resource]
+script = ExtResource("1_72mgs")
+Alias = "Постирать вещи"
+Reward = 12
+Time_to_event = 60
+After_Action = 0

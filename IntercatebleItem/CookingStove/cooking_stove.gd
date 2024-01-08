@@ -10,6 +10,7 @@ func _ready():
 
 func interacted():
 	if Stats.player.object_in_hands == Stats.player.ObjectHold.NONE:
+		Stats.player.set_physics_process(false)
 		var mini_game_inst: MiniGame = mini_game.instantiate()
 		mini_game_inst.game_finish.connect(give_eat)
 		add_child(mini_game_inst)

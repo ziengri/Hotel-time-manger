@@ -8,8 +8,6 @@ func _ready():
 
 
 func interacted():
-	print(Stats.player.object_in_hands)
-	if Stats.player.object_in_hands == Stats.player.ObjectHold.FOOD:
-		Stats.player.object_in_hands = Stats.player.ObjectHold.NONE
-		print(false)
+	Stats.player.object_in_hands = Stats.player.ObjectHold.NONE
+
 
