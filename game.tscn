@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyqdoyecwb54g"]
+[gd_scene load_steps=4 format=3 uid="uid://dyqdoyecwb54g"]
 
 [ext_resource type="Script" path="res://MiniGames/RoomCleaning/game.gd" id="1_abslh"]
 [ext_resource type="Texture2D" uid="uid://dop5p886ae16i" path="res://MiniGames/RoomCleaning/resources/carpet.png" id="2_nxf42"]
+[ext_resource type="AudioStream" uid="uid://ckxh7k1330ncs" path="res://MiniGames/RoomCleaning/resources/clean room.mp3" id="3_la8ws"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_abslh")
@@ -27,3 +28,8 @@ offset_bottom = 246.0
 text = "Убери комнату перед следующим поситителем"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="clean_room" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_la8ws")
+autoplay = true
+bus = &"SoundFx"

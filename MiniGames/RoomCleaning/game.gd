@@ -4,6 +4,7 @@ extends Node2D
 @onready var progress_bar :ProgressBar = $ProgressBar
 
 @onready var carpet :Sprite2D= $Carpet
+@onready var clean_room = $clean_room
 
 var ITEMS_COUNT :int = 13
 var items_clear = 0
@@ -39,6 +40,7 @@ func on_item_clear()->void:
 func finish_game():
 	hint.text= "Готово"
 	await get_tree().create_timer(0.4).timeout
+	clean_room.stop()
 	get_parent().finish_game()
 
 

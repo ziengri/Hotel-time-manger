@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 var direction : Vector2
 
+@onready var use_area :Area2D = $Area2D
 
 @onready var states: StateMachine = $States
 @onready var animTree: AnimationTree = $AnimationTree

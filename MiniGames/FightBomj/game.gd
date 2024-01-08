@@ -2,12 +2,14 @@ extends Node2D
 
 @onready var area_2d: Area2D = $Sprite2D/Area2D
 @onready var progress_bar: ProgressBar = $Container/ProgressBar
+@onready var fight_sound = $fight_sound
 
 @onready var label = $Container/Label
 var hp: int = 50
 #var text: Array["Отлично!",""]
 
 func _ready():
+	fight_sound.play(0.5)
 	area_2d.input_event.connect(hit)
 	progress_bar.max_value = hp
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
@@ -37,6 +39,7 @@ func _process(delta):
 func finish_game():
 	label.text= "Готово"
 	await get_tree().create_timer(1).timeout
+	fight_sound.stop()
 	$Sprite2D.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_parent().finish_game()
