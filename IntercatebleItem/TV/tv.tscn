@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://clduue1evwx1w"]
+
+[ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_5axiw"]
+[ext_resource type="Script" path="res://events/event_res.gd" id="2_njidm"]
+[ext_resource type="Texture2D" uid="uid://br50ootmvd1ij" path="res://textures/world/16x16/Items_1_16x16.png" id="2_ts80b"]
+[ext_resource type="PackedScene" uid="uid://qpo60otevwiq" path="res://MiniGames/TVRepair/tv_repair_game.tscn" id="3_mnama"]
+
+[sub_resource type="Resource" id="Resource_o7bpn"]
+script = ExtResource("2_njidm")
+Alias = "Не работает телевизор"
+Reward = 7
+Time_to_event = 40
+After_Action = 0
+
+[node name="TV" instance=ExtResource("1_5axiw")]
+event_info = SubResource("Resource_o7bpn")
+mini_game = ExtResource("3_mnama")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -10)
+texture = ExtResource("2_ts80b")
+region_enabled = true
+region_rect = Rect2(331.458, 60.4593, 21.6209, 19.4588)
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, -8)
+
+[node name="CollisionShape2D" parent="InteractArea" index="0"]
+position = Vector2(0, -9)

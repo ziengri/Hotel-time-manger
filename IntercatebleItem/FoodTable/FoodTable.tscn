@@ -15,6 +15,12 @@ texture = ExtResource("2_pasxn")
 region_enabled = true
 region_rect = Rect2(161.789, 157.789, 28.2237, 20.5263)
 
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+position = Vector2(0, -5)
+texture = ExtResource("2_pasxn")
+region_enabled = true
+region_rect = Rect2(302.323, 238.026, 0.466492, 0)
+
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2(0.5, -3.75)
 

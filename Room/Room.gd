@@ -6,6 +6,7 @@ class_name Room
 var visitor :CharacterBody2D
 @onready var room_position : Marker2D = $Marker2D
 @onready var broom :InteractableItem = $Broom
+@onready var sign = $Sign/Label
 
 
 enum RoomStatus{
@@ -15,12 +16,20 @@ enum RoomStatus{
 	CLOSED
 }
 
+
 @export var status : RoomStatus : set = set_status
 func set_status(new_status)->void:
 	if new_status == RoomStatus.DIRTY:
+		broom.visible = true
 		start_clean_room_event()
+	else:
+		broom.visible = false
 	status = new_status
 	
+
+func _ready():
+	sign.text = str(room_id)
+
 
 func start_clean_room_event()->void:
 	broom.start_event()

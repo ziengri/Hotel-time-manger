@@ -11,7 +11,7 @@ func set_money(new_value):
 	stats_changed.emit()
 
 const max_stars : int = 5
-@export var stars :int = 1 : set = set_stars
+@export var stars :int = 5 : set = set_stars
 
 func set_stars(new_value):
 	if(new_value<= 0):
