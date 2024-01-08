@@ -10,6 +10,7 @@ var progress_point = 36
 @onready var chicken = $Pan/Chicken
 @onready var progress_bar: ProgressBar = $Container/ProgressBar
 @onready var coocing: bool = false
+@onready var cooking_sound = $cooking_sound
 
 
 func _ready():
@@ -73,6 +74,7 @@ func _process(delta):
 func finish_game():
 	label.text= "Готово"
 	coocing = false
-	$Sprite2D.texture = load("res://MiniGames/Coocing/resourses/kitchen_stove_off.png")
+	$Sprite2D.texture = load("res://Mini`Games/Coocing/resourses/kitchen_stove_off.png")
 	await get_tree().create_timer(1).timeout
+	cooking_sound.stop()
 	get_parent().finish_game()

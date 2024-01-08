@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddr2kc1w5a2im"]
+[gd_scene load_steps=10 format=3 uid="uid://ddr2kc1w5a2im"]
 
 [ext_resource type="Script" path="res://MiniGames/Washing/game.gd" id="1_2btok"]
 [ext_resource type="Texture2D" uid="uid://oiu0d6pvdlj7" path="res://MiniGames/Washing/resources/laundry.png" id="2_02ec1"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cr825xdybi12r" path="res://MiniGames/Washing/resources/washing_mashine_clothes.png" id="4_fpdgm"]
 [ext_resource type="Texture2D" uid="uid://q3y7xan72t3d" path="res://MiniGames/Washing/resources/washing_mashine_open.png" id="5_7itbd"]
 [ext_resource type="Texture2D" uid="uid://cnregsw58pcfl" path="res://MiniGames/Washing/resources/washing_mashine.png" id="6_hrc4g"]
+[ext_resource type="AudioStream" uid="uid://bggdgl0dsa2lc" path="res://MiniGames/Washing/resources/Wash matching fast.mp3" id="7_56vji"]
+[ext_resource type="AudioStream" uid="uid://c0iga7iitvd48" path="res://MiniGames/Washing/resources/Open matching.mp3" id="8_llrrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jdxc"]
 size = Vector2(80, 80)
@@ -77,5 +79,12 @@ offset_top = 5.0
 offset_right = 320.0
 offset_bottom = 32.0
 step = 1.0
+
+[node name="wash_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_56vji")
+
+[node name="open_matching" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_llrrn")
+bus = &"SoundFx"
 
 [editable path="Mashine_full"]

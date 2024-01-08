@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddp34gt1hbmc7"]
+[gd_scene load_steps=6 format=3 uid="uid://ddp34gt1hbmc7"]
 
 [ext_resource type="Script" path="res://MiniGames/FightBomj/game.gd" id="1_0fnpp"]
 [ext_resource type="Texture2D" uid="uid://ophl8tgtd8h8" path="res://MiniGames/FightBomj/resourses/floor_bomj.png" id="2_olk6g"]
 [ext_resource type="Texture2D" uid="uid://bvldesrdcfn71" path="res://MiniGames/FightBomj/resourses/bomj_head1.png" id="3_eut0y"]
 [ext_resource type="Texture2D" uid="uid://hgdvlomgxbey" path="res://MiniGames/FightBomj/resourses/glow.png" id="4_vs2k7"]
+[ext_resource type="AudioStream" uid="uid://k8on0ea1d3cg" path="res://MiniGames/FightBomj/resourses/Fight.mp3" id="5_bqwdb"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_0fnpp")
@@ -52,3 +53,6 @@ step = 1.0
 position = Vector2(351, 183)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_vs2k7")
+
+[node name="fight_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_bqwdb")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ruytfghiixxu"]
+[gd_scene load_steps=8 format=3 uid="uid://ruytfghiixxu"]
 
 [ext_resource type="Script" path="res://MiniGames/Coocing/game.gd" id="1_fw4m2"]
 [ext_resource type="Texture2D" uid="uid://dwrktmjgscv12" path="res://MiniGames/Coocing/resourses/kitchen_floor.png" id="2_mggxp"]
 [ext_resource type="Texture2D" uid="uid://blrp66wgppurn" path="res://MiniGames/Coocing/resourses/kitchen_stove_off.png" id="3_icvku"]
 [ext_resource type="Texture2D" uid="uid://oq8golyrp3go" path="res://MiniGames/Coocing/resourses/pan.png" id="4_ho0ap"]
 [ext_resource type="Texture2D" uid="uid://bilkbvqvb8ehq" path="res://MiniGames/Coocing/resourses/chiken.png" id="5_qgds6"]
+[ext_resource type="AudioStream" uid="uid://dd3fskoqrgwyo" path="res://MiniGames/Coocing/resourses/Cooking.mp3" id="6_oycjb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_118ml"]
 size = Vector2(126, 179)
@@ -66,3 +67,7 @@ texture = ExtResource("5_qgds6")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(197, 60)
+
+[node name="cooking_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_oycjb")
+autoplay = true

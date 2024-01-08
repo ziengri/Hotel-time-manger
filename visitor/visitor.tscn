@@ -259,7 +259,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(471.212, 252.952)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3tun"]
-size = Vector2(10, 21.9792)
+size = Vector2(10, 31.9999)
 
 [node name="Visitor" type="CharacterBody2D"]
 process_mode = 1
@@ -346,7 +346,7 @@ position = Vector2(0, -7)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
-position = Vector2(0, 3.98975)
+position = Vector2(0, 9.00007)
 shape = SubResource("RectangleShape2D_q3tun")
 
 [node name="Dissatisfaction" type="ProgressBar" parent="."]
