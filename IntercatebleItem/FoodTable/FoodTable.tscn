@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cghi2py7q5orr"]
+[gd_scene load_steps=6 format=3 uid="uid://cghi2py7q5orr"]
 
 [ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_svpfe"]
 [ext_resource type="Resource" uid="uid://crywalp6xe8ag" path="res://IntercatebleItem/FoodTable/food_table_eventinfo.tres" id="2_386te"]
-[ext_resource type="Texture2D" uid="uid://br50ootmvd1ij" path="res://textures/world/16x16/Items_1_16x16.png" id="2_pasxn"]
 [ext_resource type="PackedScene" uid="uid://c8yh5i3w2ji0e" path="res://MiniGames/CheckFood/check_food_game.tscn" id="3_fuf00"]
+[ext_resource type="Texture2D" uid="uid://mj2ns13u5rbx" path="res://textures/world/furniture spritesheet.png" id="4_hebxh"]
+[ext_resource type="Texture2D" uid="uid://bilkbvqvb8ehq" path="res://MiniGames/Coocing/resourses/chiken.png" id="5_v2p0y"]
 
 [node name="FoodTable" instance=ExtResource("1_svpfe")]
 event_info = ExtResource("2_386te")
@@ -11,18 +12,23 @@ mini_game = ExtResource("3_fuf00")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, -5)
-texture = ExtResource("2_pasxn")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_hebxh")
 region_enabled = true
-region_rect = Rect2(161.789, 157.789, 28.2237, 20.5263)
+region_rect = Rect2(376.648, 142.311, 10.8105, 9.64697)
 
 [node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
-position = Vector2(0, -5)
-texture = ExtResource("2_pasxn")
-region_enabled = true
+modulate = Color(1, 1, 0.980392, 0.831373)
+z_index = 1
+position = Vector2(0, -6)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_v2p0y")
 region_rect = Rect2(302.323, 238.026, 0.466492, 0)
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
-position = Vector2(0.5, -3.75)
+visible = false
+position = Vector2(0, -5.625)
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
-position = Vector2(0, -6)
+visible = false
+position = Vector2(0, -5.5)

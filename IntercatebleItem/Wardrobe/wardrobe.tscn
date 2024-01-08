@@ -3,20 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://by3gp3ty5tmdq" path="res://IntercatebleItem/interactable_item.tscn" id="1_hooy8"]
 [ext_resource type="Resource" uid="uid://vjewc56ffeq2" path="res://IntercatebleItem/Wardrobe/wardrobe_eventinfo.tres" id="2_bxsvn"]
 [ext_resource type="PackedScene" uid="uid://cc8ylouetwap7" path="res://MiniGames/CheckClothes/check_clothes_game.tscn" id="3_pavn0"]
-[ext_resource type="Texture2D" uid="uid://br50ootmvd1ij" path="res://textures/world/16x16/Items_1_16x16.png" id="4_id5r0"]
+[ext_resource type="Texture2D" uid="uid://mj2ns13u5rbx" path="res://textures/world/furniture spritesheet.png" id="4_opt1n"]
 
 [node name="Wardrobe" instance=ExtResource("1_hooy8")]
 event_info = ExtResource("2_bxsvn")
 mini_game = ExtResource("3_pavn0")
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(0, -11)
-texture = ExtResource("4_id5r0")
+position = Vector2(0, -6)
+texture = ExtResource("4_opt1n")
 region_enabled = true
-region_rect = Rect2(255.658, 25.6899, 17.0902, 22.8835)
+region_rect = Rect2(101.81, 34.8401, 16.7574, 32.862)
 
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
-position = Vector2(-1, -6.5)
+position = Vector2(0, -5.5)
 
 [node name="CollisionShape2D" parent="InteractArea" index="0"]
-position = Vector2(0, -7)
+position = Vector2(0, -5.5)

@@ -215,13 +215,13 @@ position_smoothing_speed = 4.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -8)
+position = Vector2(0, -16)
 texture = ExtResource("2_bg5fh")
 hframes = 6
 vframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3.5)
+position = Vector2(0, -4.5)
 shape = SubResource("RectangleShape2D_cxs5x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -263,6 +263,7 @@ script = ExtResource("4_oxyia")
 script = ExtResource("5_3o7n7")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -8)
 rotation = 3.14159
 collision_layer = 4
 collision_mask = 4
