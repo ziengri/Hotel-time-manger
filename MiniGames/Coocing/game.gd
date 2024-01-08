@@ -74,7 +74,7 @@ func _process(delta):
 func finish_game():
 	label.text= "Готово"
 	coocing = false
-	$Sprite2D.texture = load("res://Mini`Games/Coocing/resourses/kitchen_stove_off.png")
+	$Sprite2D.texture = load("res://MiniGames/Coocing/resourses/kitchen_stove_off.png")
 	await get_tree().create_timer(1).timeout
 	cooking_sound.stop()
 	get_parent().finish_game()
